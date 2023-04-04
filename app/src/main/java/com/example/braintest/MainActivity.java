@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
 
         DownloadTasks tasks = new DownloadTasks();
         String result = null;
+
+
         try {
             result = tasks.execute("https://viblo.asia/p/xu-ly-da-tien-trinh-trong-android-bang-asynctask-ZDEeLRMpvJb").get();
         } catch (ExecutionException e) {
@@ -35,5 +37,6 @@ public class MainActivity extends AppCompatActivity {
             throw new RuntimeException(e);
         }
         Log.i("Result", result);
+        Log.i("test","hello");
     }
 }
